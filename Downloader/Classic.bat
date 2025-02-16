@@ -10,11 +10,12 @@ set condition0=%2
 set ver=%2.x
 IF %1 == 128K (set emu=Mini vMac) ELSE (set emu=other)
 IF %1 == 512Ke (set emu=Mini vMac & set "notice=NOTICE: The emulator may not launch properly without you compiling Mini vMac YOURSELF (or finding it online).") ELSE (set emu=other)
+IF %1 == Plus (set emu=Mini vMac) ELSE (set emu=other)
 echo Press any key to start...
 echo.
 echo DEBUG INFO
 echo ==========
-echo MacOS version: %ver%
+echo Launch file: %ver%
 echo Emulator Version: 36.40
 echo Emulating Macintosh: %1 using %emu%
 echo %notice%
